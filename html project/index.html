@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon"
+        href="https://logonoid.com/images/epic-games-logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Search the Cards</title>
+
+    <style>
+        /* CSS*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #183451;
+        }
+
+        /* Navigation bar styles */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 99vw;
+            z-index: 999;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            box-shadow: 0 4px 4px 0 rgba(25, 231, 231, 0.2);
+        }
+
+        .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            float: right;
+            margin-right: 2rem;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 1rem;
+        }
+        .nav-links li a:hover {
+            transform: translateY(10px);
+            color: rgb(192, 29, 29);
+        }
+
+        .burger {
+            display: none;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .burger {
+                display: block;
+                cursor: pointer;
+            }
+        }
+
+        /* Search section styles */
+        .search {
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://cdn.gamerjournalist.com/primary/2021/05/Epic-Games-free-Mystery-Game-might-be-a-big-one.jpg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: repeat;
+            /* opacity: 50; */
+        }
+
+        .search-container {
+            background-color: rgba(22, 47, 63, 0.9);
+            padding: 2rem;
+            text-align: center;
+            border-radius: 8px;
+            color: rgb(255, 255, 255);
+        }
+
+        .search-container h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .search-container input[type='text'] {
+            padding: 0.5rem;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 1rem;
+            width: 60%;
+        }
+
+        .search-container button {
+            padding: 0.5rem 1.5rem;
+            font-size: 1.2rem;
+            background-color: #211e1e;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Card section styles */
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 5rem;
+            color: rgb(255, 255, 255);
+        }
+
+        .card {
+            width: 30%;
+            margin: 1rem;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1rem;
+        }
+
+        .card-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-content p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .card-btn {
+            float: right;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <div class="logo">
+            <a href="#">Epic Games </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Search section -->
+    <section class="search">
+        <div class="search-container">
+            <h1>Looking to download a Game?</h1>
+            <input type="text" placeholder="Ask me..." />
+            <button type="submit"><i class="fa fa-search"></i>&nbsp;</button>
+        </div>
+    </section>
+
+    <!-- Card section -->
+    <section class="cards">
+        <div class="card">
+            <img src="https://getwallpapers.com/wallpaper/full/2/e/6/1056050-epic-gaming-wallpapers-2560x1600-download.jpg"
+                alt="gaming" />
+            <div class="card-content">
+                <h2>Candy crush</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    porttitor ultrices est, vel viverra turpis consequat vel. Donec
+                    dignissim metus nec massa ultrices consequat.
+                </p>
+            </div>
+            <div class="card-btn">
+                <!-- <button class="button-8" role="button">Read more</button> -->
+                <button class="button-61" role="button">Read more</button>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i0.wp.com/wallpapercave.com/wp/wp7203920.jpg" alt="gaming" />
+            <div class="card-content">
+                <h2>Bgmi</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    porttitor ultrices est, vel viverra turpis consequat vel. Donec
+                    dignissim metus nec massa ultrices consequat.
+                </p>
+            </div>
+            <div class="card-btn">
+                <!-- <button class="button-8" role="button">Read more</button> -->
+                <button class="button-61" role="button">Read more</button>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://wallpapercave.com/wp/NZti6w4.jpg" />
+            <div class="card-content">
+                <h2>GTA</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    porttitor ultrices est, vel viverra turpis consequat vel. Donec
+                    dignissim metus nec massa ultrices consequat.
+                </p>
+            </div>
+            <div class="card-btn">
+                <!-- <button class="button-8" role="button">Read more</button> -->
+                <button class="button-61" role="button">Read more</button>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://wallpapercave.com/wp/wp4584986.png"
+                alt="gaming" />
+            <div class="card-content">
+                <h2>Mini militia</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    porttitor ultrices est, vel viverra turpis consequat vel. Donec
+                    dignissim metus nec massa ultrices consequat.
+                </p>
+            </div>
+            <div class="card-btn">
+                <!-- <button class="button-8" role="button">Read more</button> -->
+                <button class="button-61" role="button">Read more</button>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://wallup.net/wp-content/uploads/2019/09/399401-alienware-gaming-laptop-computer-videogame-14-jpg.jpg"
+                alt="gaming" />
+            <div class="card-content">
+                <h2>Pubg</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    porttitor ultrices est, vel viverra turpis consequat vel. Donec
+                    dignissim metus nec massa ultrices consequat.
+                </p>
+            </div>
+            <div class="card-btn">
+                <!-- <button class="button-8" role="button">Read more</button> -->
+                <button class="button-61" role="button">Read more</button>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <h5>KRAFTON</h5>
+        <p>© 2023 KRAFTON, INC. GAME IS A REGISTERED TRADEMARK OR SERVICE MARK OF KRAFTON, INC.</p>
+    </footer>
+
+</body>
+
+</html>
